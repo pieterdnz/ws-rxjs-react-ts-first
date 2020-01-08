@@ -29,7 +29,6 @@ const RxjsHooksWatch: React.FC<IProps> = ({ name, intervalValue, source }) => {
     interval(intervalValue).pipe(
       take(source.length),
       map(i => source.slice(0, i + 1)),
-      //concat(),
       tap(val => console.log(val))
     )
   );

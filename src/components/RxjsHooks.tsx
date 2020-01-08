@@ -9,7 +9,6 @@ interface IProps {
 }
 
 const RxjsHooks: React.FC<IProps> = ({ name, intervalValue }) => {
-  //const names = useObservable(getObservableNames$(5000));
   const value = useObservable(() =>
     interval(intervalValue).pipe(map(val => val * 3))
   );
